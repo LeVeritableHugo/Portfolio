@@ -1,8 +1,9 @@
-
+/* Palette: clair = #d7d1dd | foncé = #171717 | violet clair = #946db2 | violet foncé = #69629c */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     
 }
 body{
@@ -21,8 +22,20 @@ body{
     background-attachment: fixed;    
     height: 100vh;
 }
+/* 
+@media (min-width: 768px) {
+    .welcome-bg{
+        background-image: url(img/backgrounds/poly3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;    
+        height: 100vh; 
+    }
+    
+ } */
 
-/******* Affichage et animation du logo en page d'accueil *******/
+/***** Affichage et animation du logo en page d'accueil *****/
 .logo-main{
     
     /*Logo normal*/
@@ -67,13 +80,13 @@ body{
 }
 
 
-/**** Nom et titre accueil ****/
+/***** Nom et titre accueil *****/
 .nom
 {
-    color: white;
-    font-size:3em;
+    color: #d7d1dd;
+    font-size:4em;
     position: absolute;
-    top: 75%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -84,7 +97,7 @@ body{
 .devweb
 {
     color: rgb(139, 139, 139);
-    font-size:1.8em;
+    font-size:2.3em;
     position: absolute;
     top: 85%;
     left: 50%;
@@ -94,7 +107,7 @@ body{
 }
 
 
-/**** Navbar ****/
+/******* Navbar *******/
 .wrapper-sidebar
 {
     height: 100vh; 
@@ -125,17 +138,8 @@ body{
 
 }
 
-/* Icone Menu */
-img{
-    height:30px;
-}
 
-.collapsed img{
-    height:30px;
-    transform: translateX(-8px);
-}
-
-/* Menu */
+    /* Menu */
 .wrapper-menu
 {
     transition: 0.8s ease-in;
@@ -143,14 +147,28 @@ img{
     text-align: center;
 }
 
-.wrapper-sidebar a{
-      text-decoration: none;
-      color:white;
-      display: block;
-      padding:30px;
+    /* Icone Menu */
+.wrapper-sidebar img{
+    height:30px;
 }
 
-.wrapper-sidebar a:hover{
+.collapsed .menuIcon{
+    transform: translateX(-8px);
+}
+
+.contactIcon{
+    margin-top:20px;
+    transition: 1s ease-in;
+}
+
+.wrapper-sidebar .menuItem{
+    text-decoration: none;
+    color:#d7d1dd ;
+    display: block;
+    padding:30px;
+}
+
+.wrapper-sidebar .menuItem:hover{
     background-color:#946db2;
 }
 
@@ -167,14 +185,83 @@ img{
 }
 
 /**** Contenu de la page ****/
-.mainContent{
-    height: 100vh;
-    color:black;
-    position: relative;
-    padding:15px;
+
+    /* Presentation */
+
+    
+    #wrapper-presentation
+    {
+        display: flex;
+        background-color: #d7d1dd;
+        height: 50vh;
+        justify-content: center;
+    }
+    #wrapper-presentation p
+    {
+        margin-top: 60px;
+        font-size: 1.4em;  
+        text-align: center;
+        
+    }
+    .walkingAnim{
+        position:absolute;
+        height:400px;
+        transform: translateY(29%);
+    }
+    
+
+    /* Projets */
+
+#projets
+{
+    display: flex;
+    background-color: #171717;
+    height:80vh;
+    font-size: 2em;
+    font-weight: 600;
+    justify-content: center;
+}
+#projets span{
+    position: absolute;
+    padding: 20px;
+    transform: translateY(30%);
+    font-size: 2.2em;
+    color: #d7d1dd;
+
+}
+#projets a{
+    height:20vh;
+    width: 20vh;
+    border-radius: 100%;
+    transform: translateY(120%);
+    margin-left: 5vh;
+    margin-right: 5vh;
+
+}
+#projets img{
+    height:20vh;
+    width: 20vh;
+    border-radius: 100%; 
+
 }
 
-button {
+
+    /* Contact */
+
+#contact
+{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(30%);
+    font-size: 1.4em;  
+}
+
+
+
+/**** Divers  ***/
+/* button {
     width: 100%;
     color: rgb(122, 122, 122);
     background: none;
@@ -184,6 +271,7 @@ button {
     text-transform: uppercase;
     padding:10px;
     transition: 0.5s ease-in;
+    cursor: pointer;
 
 
 }
@@ -192,7 +280,7 @@ button:hover { font-weight: 600; }
 
 button:focus {
     outline: none;
-}
+} */
 
 
 .hidden

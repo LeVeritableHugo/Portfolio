@@ -10,36 +10,83 @@
 
     <body>
 
+<!-------------------- Sidebar -------------------->
         <div class="wrapper-sidebar collapsed" >
             <button class="expand">
-                <img src="img/Icone-1.png" class="menuIcon">
+                <img src="img/Icones/Icone-1.png" class="menuIcon">
             </button>
 
+            <a href="#contact">
+                <img src="img/Icones/Icone-Mail.png" class="contactIcon">
+            </a>
+
             <div class="wrapper-menu hidden">
-                <a href="#" class="menuItem">Projets</a>
+                <a href="#wrapper-presentation" class="menuItem">À propos</a>
+                <a href="#projets" class="menuItem">Projets</a>
                 <a href="#contact" class="menuItem">Contact</a>
-                <a href="#" class="menuItem">À propos</a>
             </div>
+            
         </div>
 
         <div class="welcome-bg"></div>   
 
-        <div class="wrapper-logo">
-            <div class="logo-main"></div>
-            <div class="logo-anim"></div>
-        </div>  
+<!-------------------- Logo -------------------->
+        <a href="#projets">
+            <div class="wrapper-logo">
+                <div class="logo-main"></div>
+                <div class="logo-anim"></div>
+            </div>
+        </a>
         
         <span class="nom">Hugo Maton</span>
         <span class="devweb">Développeur Web</span>
 
 
-      
+<!-------------------- Infos -------------------->
+        <div >
+            <img src="img/walking.gif" class="walkingAnim" >
+        </div>
+        <div id="wrapper-presentation">
+            <p> Bonjour, ceci est une présentation temporaire.<br>
+                Il s'agit ici de simplement prendre la place d'un texte qui, si l'inspiration est de la partie, sera un jour ou l'autre définitif.<br>
+                Il viserait bien sûr ma propre personne, mettant en avant mon identité ainsi que ma fonction.<br>
+                Celle-ci, bien que déclarée, ne saurait être appellée que si ce site ainsi que son propriétaire venaient à plaire. 
+                <br><br>
+                Cordialement.
+            </p>
 
-        <div class="mainContent"></div>
+            
+        </div>
+       
 
-            <div id="contact">
-                <p>E-mail: placeholder@holdingplace.com</p>
-            </div>
+<!-------------------- Projets -------------------->
+        <div id="projets">
+
+            <span>Projets</span>
+
+            <a href="#">
+                <img src="img/logo/JSlogo.png" class="logoProjet" alt="logo JS">
+            </a>
+
+            <a href="#contact" >
+                <img src="img/logo/PHPlogo.png" class="logoProjet" alt="logo PHP">
+            </a>
+
+            <a href="#presentation">
+                <img src="img/logo/ClogoCercle.png" class="logoProjet" alt="logo C++">
+            </a>
+
+            <a href="#">
+                <img src="img/logo/JavaLogoCercle.png" class="logoProjet" alt="logo Java">
+
+            </a>
+
+        </div>
+
+<!-------------------- Contact -------------------->
+        <div id="contact">
+            <p>E-mail: placeholder@holdingplace.com</p>
+        </div>
         
         <script src="app.js"></script>
     </body>
