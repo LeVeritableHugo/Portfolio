@@ -15,7 +15,7 @@ body{
 }
 
 .welcome-bg{
-    background-image: url(img/backgrounds/poly3.jpg);
+    background-image: url(img/backgrounds/PolyBackground.jpg);
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: center;
@@ -47,6 +47,7 @@ body{
     background-image: url(img/logo/HugoLogoCercle.png);
     height:500px;
     width: 500px;
+    border-radius: 100%;
 
     position: absolute;
     top: 35%;
@@ -65,6 +66,8 @@ body{
     height:500px;
     width: 500px;
     opacity: 0;
+    border-radius: 100%;
+
 
     position: absolute;
     top: 35%;
@@ -85,6 +88,7 @@ body{
 {
     color: #d7d1dd;
     font-size:4em;
+    font-weight: 500;
     position: absolute;
     top: 73%;
     left: 50%;
@@ -117,7 +121,7 @@ body{
     top: 0;
     left: 0;
     background-color: #171717;
-    box-shadow: 0px 0px 40px #946db2;
+    box-shadow: 0px 0px 10px #946db2;
     overflow-x: hidden; 
     padding:10px;
     transition: 0.2s ease-in;
@@ -156,9 +160,18 @@ body{
     transform: translateX(-8px);
 }
 
-.contactIcon{
-    margin-top:20px;
-    transition: 1s ease-in;
+.collapsedIcon{
+    transition: 1.8s ease-in;
+}
+
+.collapsedIcon img{
+    margin-top:25px;
+}
+
+.menuImg{
+    margin:5px;
+    display: flex;
+    transform: translateX(120%);
 }
 
 .wrapper-sidebar .menuItem{
@@ -169,7 +182,7 @@ body{
 }
 
 .wrapper-sidebar .menuItem:hover{
-    background-color:#946db2;
+    background-color:#69629c;
 }
 
 .wrapper-sidebar button {
@@ -193,7 +206,7 @@ body{
     {
         display: flex;
         background-color: #d7d1dd;
-        height: 50vh;
+        height: 70vh;
         justify-content: center;
     }
     #wrapper-presentation p
@@ -204,9 +217,9 @@ body{
         
     }
     .walkingAnim{
-        position:absolute;
-        height:400px;
-        transform: translateY(29%);
+        position: absolute;;
+        height:500px;
+        transform: translateY(43.1%);
     }
     
 
@@ -215,29 +228,34 @@ body{
 #projets
 {
     display: flex;
-    background-color: #171717;
-    height:80vh;
-    font-size: 2em;
+    background-image: url(img/backgrounds/ProjetBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    height:100vh;
     font-weight: 600;
     justify-content: center;
 }
 #projets span{
     position: absolute;
     padding: 20px;
-    transform: translateY(30%);
-    font-size: 2.2em;
+    transform: translateY(50%);
+    font-size: 5em;
     color: #d7d1dd;
-
 }
+
 #projets a{
+
     height:20vh;
     width: 20vh;
     border-radius: 100%;
-    transform: translateY(120%);
+    transform: translateY(200%);
     margin-left: 5vh;
     margin-right: 5vh;
 
 }
+
 #projets img{
     height:20vh;
     width: 20vh;
@@ -251,14 +269,47 @@ body{
 #contact
 {
     display: flex;
-    height: 100vh;
+    background-image: url(img/backgrounds/ContactBackground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    height:100vh;
+    font-weight: 600;
     justify-content: center;
-    text-align: center;
-    transform: translateY(30%);
-    font-size: 1.4em;  
+}
+#contact span{
+    position: absolute;
+    padding: 20px;
+    transform: translateY(50%);
+    font-size: 4em;
+    color: #171717;
 }
 
+#contact a{
 
+    height:20vh;
+    width: 20vh;
+    border-radius: 100%;
+    transform: translateY(180%);
+    margin-left: 10vh;
+    margin-right: 10vh;
+
+}
+
+#contact img{
+    height:20vh;
+    width: 20vh;
+    border-radius: 100%; 
+
+}
+
+#formulaireContact{
+    position: absolute;
+    display: flex;
+    height:20vh;
+    left: 20%;
+}
 
 /**** Divers  ***/
 /* button {

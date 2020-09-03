@@ -1,15 +1,18 @@
 let collapsed = true;
 let iconID = 0;
-
+let posImage = 0;
 
 const bouton = document.querySelector(".expand");
-let menuIcon = document.querySelector('.menuIcon');
+const menuIcon = document.querySelector('.menuIcon');
+const walkAnim = document.querySelector(".walkingAnim");
+
+
 //Menu déroulant
 function expand()
 {
     document.querySelector('.wrapper-sidebar').classList.toggle("collapsed")
     document.querySelector('.wrapper-menu').classList.toggle("hidden");
-    document.querySelector('.contactIcon').classList.toggle("hidden")
+    document.querySelector('.collapsedIcon').classList.toggle("hidden")
 
     if(!collapsed)
     {
@@ -26,21 +29,20 @@ function expand()
     }
 }
 
-let posImage = 0;
-let walkAnim = document.querySelector(".walkingAnim");
+bouton.addEventListener('click', expand);
+
+// Animation de marche
 
 function walking() 
 {
-  walkAnim.style.paddingLeft= (posImage) + "px";
+  walkAnim.style.left= (posImage) + "px";
   posImage += 5;
-  if(posImage >= 2000)
+  if(posImage >= window.innerWidth)
   {
       posImage = 0;
   }
 
 }
+document.addEventListener('scroll', walking);
 
-document.addEventListener('scroll', walking)
 
-
-bouton.addEventListener('click', expand);

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
         
@@ -16,14 +17,42 @@
                 <img src="img/Icones/Icone-1.png" class="menuIcon">
             </button>
 
-            <a href="#contact">
-                <img src="img/Icones/Icone-Mail.png" class="contactIcon">
-            </a>
+            <div class="collapsedIcon">
+                <a href="#wrapper-presentation">
+                    <img src="img/Icones/Icone-infos.png">
+                </a>
+                <a href="#projets">
+                    <img src="img/Icones/Icone-Projet.png">
+                </a>
+                <a href="#contact">
+                    <img src="img/Icones/Icone-Mail.png" >
+                </a>
+                <a href="#">
+                    <img src="img/Icones/Icone-accueil.png" >
+                </a>
+            </div>
 
             <div class="wrapper-menu hidden">
-                <a href="#wrapper-presentation" class="menuItem">À propos</a>
-                <a href="#projets" class="menuItem">Projets</a>
-                <a href="#contact" class="menuItem">Contact</a>
+                <a href="#wrapper-presentation" class="menuItem">
+                    <img src="img/Icones/Icone-infos.png" class="menuImg">
+                    À propos
+                </a>
+
+                <a href="#projets" class="menuItem">
+                    <img src="img/Icones/Icone-Projet.png" class="menuImg">
+                    Projets
+                </a>
+
+                <a href="#contact" class="menuItem">
+                    <img src="img/Icones/Icone-Mail.png" class="menuImg">
+                    Contact
+                </a>
+
+                <a href="#" class="menuItem">
+                    <img src="img/Icones/Icone-accueil.png" class="menuImg">
+                    Accueil
+                </a>
+                
             </div>
             
         </div>
@@ -68,25 +97,57 @@
                 <img src="img/logo/JSlogo.png" class="logoProjet" alt="logo JS">
             </a>
 
-            <a href="#contact" >
+            <a href="#" >
                 <img src="img/logo/PHPlogo.png" class="logoProjet" alt="logo PHP">
             </a>
 
-            <a href="#presentation">
+            <a href="#">
                 <img src="img/logo/ClogoCercle.png" class="logoProjet" alt="logo C++">
             </a>
 
             <a href="#">
                 <img src="img/logo/JavaLogoCercle.png" class="logoProjet" alt="logo Java">
-
             </a>
 
+            <a href="#">
+                <img src="img/logo/PSlogo.png" class="logoProjet" alt="logo Photoshop">
+            </a>
         </div>
 
 <!-------------------- Contact -------------------->
         <div id="contact">
-            <p>E-mail: placeholder@holdingplace.com</p>
+            <span>Contact</span>
+
+            <a href="mailto:thehugo56@gmail.com">
+                <img src="img/logo/logoContact.png" class="logoProjet" alt="e-mail">
+            </a>
+
+            <a href="#" >
+                <img src="img/logo/phoneLogo.png" class="logoProjet" alt="telephone">
+            </a>
+
+            <a href="https://github.com/LeVeritableHugo" target="_blank">
+                <img src="img/logo/GitLogo.png" class="logoProjet" alt="gitHub">
+            </a>
+
+           
         </div>
+        <!-- <div id="formulaireContact">
+            <form action="" method="get" class="formulaireContact">
+                
+                <label for="nom">Nom: </label>
+                <input type="text" name="nom" id="nom" required>
+                
+                <label for="prenom">Prénom: </label>
+                <input type="text" name="prenom" id="prenom" required>
+                
+                <label for="email">Adresse E-mail: </label>
+                <input type="email" name="email" id="email" required>
+
+                <input type="submit" value="Envoyer">
+                
+            </form>
+        </div> -->
         
         <script src="app.js"></script>
     </body>
