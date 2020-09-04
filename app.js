@@ -5,6 +5,11 @@ let posImage = 0;
 const bouton = document.querySelector(".expand");
 const menuIcon = document.querySelector('.menuIcon');
 const walkAnim = document.querySelector(".walkingAnim");
+const iconeJS = document.querySelector('.Javascript');
+const iconePHP = document.querySelector('.PHP');
+const iconeC = document.querySelector('.C');
+const iconeJava = document.querySelector('.Java');
+const iconeDesign = document.querySelector('.Design');
 
 
 //Menu déroulant
@@ -44,5 +49,54 @@ function walking()
 
 }
 document.addEventListener('scroll', walking);
+
+
+
+
+
+
+
+function changeDesc(elem)
+{
+    elem.addEventListener('mouseenter', function()
+    {
+        let name = elem.className;
+        
+        if(name.includes("Javascript"))
+        {            
+            document.querySelector('.descProjet').textContent='Javascript';
+        }
+        else if(name.includes("PHP"))
+        {            
+            document.querySelector('.descProjet').textContent='PHP';
+        }
+        else if(name.includes("C"))
+        {            
+            document.querySelector('.descProjet').textContent='C/C++';
+        }
+        else if(name.includes("Java"))
+        {            
+            document.querySelector('.descProjet').textContent='Java';
+        }
+        else if(name.includes("Design"))
+        {            
+            document.querySelector('.descProjet').textContent='Design';
+        }
+    })
+    
+    elem.addEventListener('mouseleave', function()
+    {
+        document.querySelector('.descProjet').textContent='';
+    })
+    
+}
+changeDesc(iconeJS);
+changeDesc(iconePHP);
+changeDesc(iconeC);
+changeDesc(iconeJava);
+changeDesc(iconeDesign);
+
+
+
 
 
