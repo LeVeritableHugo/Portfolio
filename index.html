@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="style.css">
         
         <title>Hugo Maton - Développeur Web</title>
@@ -34,22 +35,22 @@
 
             <div class="wrapper-menu hidden">
                 <a href="#wrapper-presentation" class="menuItem">
-                    <img src="img/Icones/Icone-infos.png" class="menuImg">
+                    <img src="img/Icones/Icone-infos.png" class="menuImg"><br>
                     À propos
                 </a>
 
                 <a href="#projets" class="menuItem">
-                    <img src="img/Icones/Icone-Projet.png" class="menuImg">
+                    <img src="img/Icones/Icone-Projet.png" class="menuImg"><br>
                     Projets
                 </a>
 
                 <a href="#contact" class="menuItem">
-                    <img src="img/Icones/Icone-Mail.png" class="menuImg">
+                    <img src="img/Icones/Icone-Mail.png" class="menuImg"><br>
                     Contact
                 </a>
 
                 <a href="#" class="menuItem">
-                    <img src="img/Icones/Icone-accueil.png" class="menuImg">
+                    <img src="img/Icones/Icone-accueil.png" class="menuImg"><br>
                     Accueil
                 </a>
                 
@@ -89,31 +90,38 @@
        
 
 <!-------------------- Projets -------------------->
-        <div id="projets">
+        <div class="container-fluid" id="projets">
 
             <span>Projets</span>
             <p class="descProjet"></p>
 
-
-            <a href="#">
-                <img src="img/logo/JSlogo.png" class="logoProjet Javascript" alt="logo JS">
-            </a>
-
-            <a href="#" >
-                <img src="img/logo/PHPlogo.png" class="logoProjet PHP" alt="logo PHP">
-            </a>
-
-            <a href="#">
-                <img src="img/logo/ClogoCercle.png" class="logoProjet C" alt="logo C++">
-            </a>
-
-            <a href="#">
-                <img src="img/logo/JavaLogoCercle.png" class="logoProjet Java" alt="logo Java">
-            </a>
-
-            <a href="#">
-                <img src="img/logo/PSlogo.png" class="logoProjet Design" alt="logo Photoshop">
-            </a>
+            <div class="row wrapper-projets">
+                <div class="col-lg-2 col-md-4">
+                    <a href="#">
+                    <img src="img/logo/JSlogo.png" class="logoProjet Javascript" alt="logo JS">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <a href="#">
+                        <img src="img/logo/PHPlogo.png" class="logoProjet PHP" alt="logo PHP">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <a href="#">
+                        <img src="img/logo/ClogoCercle.png" class="logoProjet C" alt="logo C++">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <a href="#">
+                        <img src="img/logo/JavaLogoCercle.png" class="logoProjet Java" alt="logo Java">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <a href="#">
+                        <img src="img/logo/PSlogo.png" class="logoProjet Design" alt="logo Photoshop">
+                    </a>
+                </div>
+            </div>
         </div>
 
 <!-------------------- Contact -------------------->
@@ -151,6 +159,9 @@
             </form>
         </div> -->
         
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="app.js"></script>
     </body>
 </html>

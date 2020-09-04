@@ -11,12 +11,14 @@ body{
     font-family: Lato;
     font-weight: 300;
     height: 100vh;
+    text-align: center;
+
     text-decoration: none;
 }
 
 .welcome-bg{
     background-image: url(img/backgrounds/PolyBackground.jpg);
-    background-size: 150%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;    
@@ -80,7 +82,7 @@ body{
     position: absolute;
     top: 73%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     overflow: hidden;
     text-align: center;
     max-height: 50%;
@@ -137,6 +139,10 @@ body{
     transition: 0.8s ease-in;
     font-size: 1.4em;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
     /* Icone Menu */
@@ -158,9 +164,7 @@ body{
 
 .menuImg{
     margin:5px;
-    display: flex;
-    transform: translateX(120%);
-}
+;}
 
 .wrapper-sidebar .menuItem{
     text-decoration: none;
@@ -196,7 +200,7 @@ body{
         background-color: #d7d1dd;
         height: 70vh;
         justify-content: center;
-    }
+        }
     #wrapper-presentation p
     {
         margin-top: 60px;
@@ -205,9 +209,9 @@ body{
         
     }
     .walkingAnim{
-        position: absolute;;
+        position: absolute;
         height:500px;
-        transform: translateY(43.1%);
+        transform: translateY(51.2%);
     }
     
 
@@ -215,33 +219,34 @@ body{
 
 #projets
 {
-    display: flex;
     background-image: url(img/backgrounds/ProjetBackground.png);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; 
     height:100vh;
     font-weight: 300;
-    justify-content: center;
 }
 #projets span{
-    position: absolute;
+    position: relative;
     padding: 20px;
     transform: translateY(50%);
     font-size: 5em;
     color: #d7d1dd;
 }
+.wrapper-projets
+{
+    background-color:red;
+    justify-content: center;
+    margin-top:20vh;
+    position: relative;
+    padding: 2rem;
+}
 
 #projets a{
-
     height:20vh;
     width: 20vh;
     border-radius: 100%;
-    transform: translateY(200%);
-    margin-left: 5vh;
-    margin-right: 5vh;
-
+    /* transform: translateY(200%); */
 }
 
 #projets img{
@@ -253,11 +258,12 @@ body{
 
 #projets p{
     position: absolute;
+    left:50%;
     font-size: 2.5em;
-    transform: translateY(22vh);
+    transform: translateX(-50%);
     color: #d7d1dd;
 
-}
+} 
 
     /* Contact */
 
@@ -334,4 +340,12 @@ button:focus {
     visibility: hidden;
     opacity: 0;
     transition: 0.2s ease-in;
+}
+
+
+
+@media(max-width:768px) {
+    .logoProjet{
+        margin: 2rem 0;
+    }
 }
