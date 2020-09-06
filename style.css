@@ -12,8 +12,10 @@ body{
     font-weight: 300;
     height: 100vh;
     text-align: center;
-
     text-decoration: none;
+    overflow-x: hidden; 
+    outline:none;
+
 }
 
 .welcome-bg{
@@ -80,7 +82,7 @@ body{
     font-size:4.5em;
     font-weight: 500;
     position: absolute;
-    top: 73%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -93,9 +95,9 @@ body{
     color: rgb(139, 139, 139);
     font-size:2.3em;
     position: absolute;
-    top: 85%;
+    top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     overflow: hidden;
     text-align: center;
 }
@@ -112,7 +114,7 @@ body{
     left: 0;
     background-color: #171717;
     box-shadow: 0px 0px 10px #946db2;
-    overflow-x: hidden; 
+    overflow: hidden; 
     padding:10px;
     transition: 0.2s ease-in;
 }
@@ -126,7 +128,7 @@ body{
     left: 0;
     background-color: #171717;
     box-shadow: 0px 0px 5px #946db2;
-    overflow-x: hidden; 
+    overflow: hidden; 
     padding:10px;    
     transition: 0.4s ease-in;
 
@@ -145,32 +147,38 @@ body{
 
 }
 
-    /* Icone Menu */
-.wrapper-sidebar img{
-    height:30px;
-}
+/* Icones Menu 
+    .menuIcon = Image Bouton 
+    .collapsedIcon = Images barre rétractée
+    .menuImg = Images barre étendue
+*/
 
 .collapsed .menuIcon{
     transform: translateX(-8px);
 }
-
+.wrapper-collapsedIcon
+{
+    transition: 2s ease-in;
+}
 .collapsedIcon{
-    transition: 1.8s ease-in;
+    margin-top:100px;
 }
 
-.collapsedIcon img{
-    margin-top:50px;
+.wrapper-sidebar img{
+    height:30px;
 }
 
 .menuImg{
     margin:5px;
-;}
+}
 
 .wrapper-sidebar .menuItem{
     text-decoration: none;
+    font-size:1.4em;
     color:#d7d1dd ;
     display: block;
     padding:30px;
+    margin-top: 90px;
 }
 
 .wrapper-sidebar .menuItem:hover{
@@ -211,7 +219,8 @@ body{
     .walkingAnim{
         position: absolute;
         height:500px;
-        transform: translateY(51.2%);
+        transform: translateY(43.1%);
+        right: 100%;
     }
     
 
@@ -223,19 +232,29 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
-    height:100vh;
+    min-height:100vh;
     font-weight: 300;
 }
+
 #projets span{
-    position: relative;
-    padding: 20px;
-    transform: translateY(50%);
+    top:500px;
     font-size: 5em;
     color: #d7d1dd;
 }
+
+#projets p{
+    position: absolute;
+    left:50%;
+    font-size: 2.5em;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    color: #d7d1dd;
+    transition: 3s ease-in;
+
+}
+
 .wrapper-projets
 {
-    background-color:red;
     justify-content: center;
     margin-top:20vh;
     position: relative;
@@ -246,7 +265,6 @@ body{
     height:20vh;
     width: 20vh;
     border-radius: 100%;
-    /* transform: translateY(200%); */
 }
 
 #projets img{
@@ -255,15 +273,6 @@ body{
     border-radius: 100%; 
 
 }
-
-#projets p{
-    position: absolute;
-    left:50%;
-    font-size: 2.5em;
-    transform: translateX(-50%);
-    color: #d7d1dd;
-
-} 
 
     /* Contact */
 
@@ -342,10 +351,56 @@ button:focus {
     transition: 0.2s ease-in;
 }
 
+.removed
+{
+    display: none;
+}
 
 
 @media(max-width:768px) {
+
+    /* Accueil */
     .logoProjet{
         margin: 2rem 0;
     }
+    
+    .nom
+    {
+        
+        font-size:3em;
+        
+    }
+    
+    .devweb
+    {
+        
+        top: 78%;
+        
+    }
+    
+    /* Menu */
+
+ 
+    .collapsed
+    {
+        height: 100vh; 
+        width: 10vh;  
+    }
+    .wrapper-sidebar img{
+        height:50px;
+    }
+
+    .wrapper-sidebar .menuItem{
+        font-size:1.3em;
+    }
+    .menuImg{
+        margin:0px;
+    }
+
+    
+    .walkingAnim{
+        display:none;
+    }
+    
+    
 }

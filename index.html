@@ -15,21 +15,21 @@
 <!-------------------- Sidebar -------------------->
         <div class="wrapper-sidebar collapsed" >
             <button class="expand">
-                <img src="img/Icones/Icone-1.png" class="menuIcon">
+                <img src="img/Icones/Icone-1.png" class="expandIcon">
             </button>
 
-            <div class="collapsedIcon">
+            <div class="wrapper-collapsedIcon">
                 <a href="#wrapper-presentation">
-                    <img src="img/Icones/Icone-infos.png">
+                    <img src="img/Icones/Icone-infos.png" class="collapsedIcon">
                 </a>
                 <a href="#projets">
-                    <img src="img/Icones/Icone-Projet.png">
+                    <img src="img/Icones/Icone-Projet.png" class="collapsedIcon">
                 </a>
                 <a href="#contact">
-                    <img src="img/Icones/Icone-Mail.png" >
+                    <img src="img/Icones/Icone-Mail.png" class="collapsedIcon">
                 </a>
                 <a href="#">
-                    <img src="img/Icones/Icone-accueil.png">
+                    <img src="img/Icones/Icone-accueil.png" class="collapsedIcon">
                 </a>
             </div>
 
@@ -74,16 +74,20 @@
 
 <!-------------------- Infos -------------------->
         <div >
-            <img src="img/walking.gif" class="walkingAnim" >
+            <img src="img/walking2.gif" class="walkingAnim" >
         </div>
-        <div id="wrapper-presentation">
-            <p> Bonjour, ceci est une présentation temporaire.<br>
-                Il s'agit ici de simplement prendre la place d'un texte qui, si l'inspiration est de la partie, sera un jour ou l'autre définitif.<br>
-                Il viserait bien sûr ma propre personne, mettant en avant mon identité ainsi que ma fonction.<br>
-                Celle-ci, bien que déclarée, ne saurait être appellée que si ce site ainsi que son propriétaire venaient à plaire. 
-                <br><br>
-                Cordialement.
-            </p>
+        
+        <div class="container-fluid" id="wrapper-presentation">
+
+            <div class="row">
+                <p> Bonjour, ceci est une présentation temporaire.<br>
+                    Il s'agit ici de simplement prendre la place d'un texte qui, si l'inspiration est de la partie, sera un jour ou l'autre définitif.<br>
+                    Il viserait bien sûr ma propre personne, mettant en avant mon identité ainsi que ma fonction.<br>
+                    Celle-ci, bien que déclarée, ne saurait être appellée que si ce site ainsi que son propriétaire venaient à plaire. 
+                    <br><br>
+                    Cordialement.
+                </p>
+            </div>  
 
             
         </div>
@@ -125,7 +129,7 @@
         </div>
 
 <!-------------------- Contact -------------------->
-        <div id="contact">
+        <!-- <div id="contact">
             <span>Contact</span>
 
             <a href="mailto:thehugo56@gmail.com">
@@ -141,7 +145,7 @@
             </a>
 
            
-        </div>
+        </div> -->
         <!-- <div id="formulaireContact">
             <form action="" method="get" class="formulaireContact">
                 
