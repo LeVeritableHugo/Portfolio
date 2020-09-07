@@ -7,6 +7,7 @@
     
 }
 body{
+    background-color: #d7d1dd;
 
     font-family: Lato;
     font-weight: 300;
@@ -139,7 +140,7 @@ body{
 .wrapper-menu
 {
     transition: 0.8s ease-in;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -154,7 +155,8 @@ body{
 */
 
 .collapsed .menuIcon{
-    transform: translateX(-8px);
+    left:50%;
+    transform: translateX(-50%);
 }
 .wrapper-collapsedIcon
 {
@@ -178,7 +180,7 @@ body{
     color:#d7d1dd ;
     display: block;
     padding:30px;
-    margin-top: 90px;
+    margin-top: 70px;
 }
 
 .wrapper-sidebar .menuItem:hover{
@@ -186,14 +188,12 @@ body{
 }
 
 .wrapper-sidebar button {
-    width: 100%;
     color: rgb(122, 122, 122);
     background: none;
     border: none;
-    font-family: Lato;
-    font-size: 20px;
-    text-transform: uppercase;
-    padding:10px;
+    padding: 5%;
+    height:50px;
+    outline:none;
 
 }
 
@@ -206,7 +206,8 @@ body{
     {
         display: flex;
         background-color: #d7d1dd;
-        height: 70vh;
+        height: 40vh;
+        width: 100%;
         justify-content: center;
         }
     #wrapper-presentation p
@@ -217,9 +218,10 @@ body{
         
     }
     .walkingAnim{
+        z-index: 1;
         position: absolute;
-        height:500px;
-        transform: translateY(43.1%);
+        height:44.6vh;
+        /* transform: translateY(100vh); */
         right: 100%;
     }
     
@@ -237,9 +239,11 @@ body{
 }
 
 #projets span{
-    top:500px;
+    position: relative;
+    top:100px;
     font-size: 5em;
     color: #d7d1dd;
+
 }
 
 #projets p{
@@ -247,7 +251,7 @@ body{
     left:50%;
     font-size: 2.5em;
     transform: translateX(-50%);
-    margin-top: 50px;
+    margin-top: 100px;
     color: #d7d1dd;
     transition: 3s ease-in;
 
@@ -287,6 +291,13 @@ body{
     height:100vh;
     font-weight: 600;
     justify-content: center;
+}
+
+.wrapper-contact
+{
+    justify-content: center;
+    margin-top:35vh;
+    padding: 2rem;
 }
 #contact span{
     position: absolute;
@@ -356,14 +367,17 @@ button:focus {
     display: none;
 }
 
-
+/* Tablettes */
 @media(max-width:768px) {
+
 
     /* Accueil */
     .logoProjet{
         margin: 2rem 0;
     }
-    
+    .logo-main:hover{
+        opacity: 100;
+    }
     .nom
     {
         
@@ -384,7 +398,7 @@ button:focus {
     .collapsed
     {
         height: 100vh; 
-        width: 10vh;  
+        width: 8vh;  
     }
     .wrapper-sidebar img{
         height:50px;
@@ -397,10 +411,138 @@ button:focus {
         margin:0px;
     }
 
-    
     .walkingAnim{
+        display:none;
+    }
+
+    /*Infos*/
+    #wrapper-presentation
+    {
+        width: 75%;
+        justify-content: center;
+    }
+
+    /* Projets */
+    #projets a{
+        height:15vh;
+        width: 15vh;
+        border-radius: 100%;
+    }
+    
+    #projets img{
+        height:15vh;
+        width: 15vh;
+        border-radius: 100%; 
+    
+    }
+  
+    
+    
+}
+
+/* Portables */
+@media (max-width: 576px) {
+
+    .logo-main{
+    
+        /*Logo normal*/
+        /* background-image: url(img/HugoLogoSmall.png);
+        height:250px;
+        width: 250px; */
+        
+        /*Logo cercle*/ 
+        background-image: url(img/logo/HugoLogoCercle.png);
+        background-size: cover;
+        height:250px;
+        width: 250px;
+        border-radius: 100%;
+    }
+    .logo-anim{
+
         display:none;
     }
     
     
+    .nom
+    {
+        width:100%;
+        font-size:2.5em;
+        
+    }
+    
+    .devweb
+    {
+        font-size:1.5em;
+
+        top: 78%;
+        
+    }
+
+    .wrapper-sidebar
+    {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color: #171717;
+        box-shadow: 0px 0px 10px #946db2;
+        /* overflow: visible;  */
+        /* padding:10px; */
+        transition: 0.2s ease-in;
+    }
+   
+    .collapsed
+    {
+        height: 70px; 
+    }
+
+    .collapsedIcon
+    {
+         margin-top:3px;
+         margin-left: 25px;
+         margin-right: 25px;
+
+    }
+    .wrapper-sidebar img{
+        height:45px;
+    }
+
+    .wrapper-sidebar .menuItem{
+        font-size:1em;
+    }
+
+
+    .expand{
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 375px) {
+
+   
+    .wrapper-sidebar
+    {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color: #171717;
+        box-shadow: 0px 0px 10px #946db2;
+        /* overflow: visible;  */
+        /* padding:10px; */
+        transition: 0.2s ease-in;
+    }
+   
+    .collapsed
+    {
+        height: 70px; 
+    }
+
+    .collapsedIcon
+    {
+         margin-top:3px;
+         margin-left: 15px;
+         margin-right: 15px;
+    }
+
 }

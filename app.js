@@ -3,7 +3,7 @@ let iconID = 0;
 let posImage = 0;
 
 const bouton = document.querySelector(".expand");
-const menuIcon = document.querySelector('.expandIcon');
+const expandIcon = document.querySelector('.expandIcon');
 const walkAnim = document.querySelector(".walkingAnim");
 const iconeJS = document.querySelector('.Javascript');
 const iconePHP = document.querySelector('.PHP');
