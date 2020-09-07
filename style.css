@@ -1,21 +1,18 @@
 /* Palette: clair = #d7d1dd | foncé = #171717 | violet clair = #946db2 | violet foncé = #69629c */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
     scroll-behavior: smooth;
-    
+
 }
+
 body{
     background-color: #d7d1dd;
-
     font-family: Lato;
     font-weight: 300;
-    height: 100vh;
     text-align: center;
     text-decoration: none;
     overflow-x: hidden; 
     outline:none;
+    min-width: auto;
 
 }
 
@@ -110,7 +107,7 @@ body{
     height: 100vh; 
     width: 20vh;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #171717;
@@ -124,7 +121,7 @@ body{
     height: 100vh; 
     width: 6vh;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #171717;
@@ -206,15 +203,17 @@ body{
     {
         display: flex;
         background-color: #d7d1dd;
-        height: 40vh;
+        min-height: 40vh;
         width: 100%;
         justify-content: center;
         }
     #wrapper-presentation p
     {
+        position: relative;
         margin-top: 60px;
         font-size: 1.4em;  
         text-align: center;
+        z-index:2;
         
     }
     .walkingAnim{
@@ -260,7 +259,7 @@ body{
 .wrapper-projets
 {
     justify-content: center;
-    margin-top:20vh;
+    margin-top:30vh;
     position: relative;
     padding: 2rem;
 }
@@ -397,7 +396,7 @@ button:focus {
  
     .collapsed
     {
-        height: 100vh; 
+        height: 100%; 
         width: 8vh;  
     }
     .wrapper-sidebar img{
@@ -433,6 +432,33 @@ button:focus {
         height:15vh;
         width: 15vh;
         border-radius: 100%; 
+    
+    }
+    .wrapper-projets
+    {
+        margin-top:15vh;
+    }
+
+    /* Contact */
+    .wrapper-contact
+    {
+        margin-top:30vh;
+    }
+    #contact a{
+        background-color:red;
+        height: 15vh;
+        width: 15vh;
+        border-radius: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    #contact img{
+        height: 15vh;
+        width: 15vh;
+        border-radius: 100%; 
+        margin-left: 0;
+        margin-right: 0;
     
     }
   
@@ -485,8 +511,7 @@ button:focus {
         z-index: 1;
         background-color: #171717;
         box-shadow: 0px 0px 10px #946db2;
-        /* overflow: visible;  */
-        /* padding:10px; */
+
         transition: 0.2s ease-in;
     }
    
@@ -515,10 +540,18 @@ button:focus {
         display: none;
     }
 
+    #wrapper-presentation p
+    {
+        margin-top: 50px;
+        font-size: 0.9em;  
+        text-align: center;
+        
+    }
+
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
 
    
     .wrapper-sidebar
@@ -528,8 +561,7 @@ button:focus {
         z-index: 1;
         background-color: #171717;
         box-shadow: 0px 0px 10px #946db2;
-        /* overflow: visible;  */
-        /* padding:10px; */
+
         transition: 0.2s ease-in;
     }
    
@@ -543,6 +575,15 @@ button:focus {
          margin-top:3px;
          margin-left: 15px;
          margin-right: 15px;
+    }
+
+    .wrapper-projets
+    {
+        margin-top:10vh;
+    }
+    .wrapper-contact
+    {
+        margin-top:20vh;
     }
 
 }
