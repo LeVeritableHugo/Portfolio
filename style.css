@@ -394,7 +394,7 @@ body{
     opacity: 0; 
 }
 
-/* Jeu de dés */
+/******** Jeu de dés ********/
 #dicegame
 {
     padding:2%;
@@ -411,16 +411,40 @@ body{
     font-weight: bold;
 }
 
-.test p{
+.dicegamePresentation p{
     font-size: 1.3em;
-    padding:30px;
+    padding-left:50px;
     padding-top:130px;
     text-align: left;
 
 }
 
+/* Blackjack */
+#blackjack
+{
+    padding:2%;
+    background-color: #171717;
+    color: #d7d1dd;
+}
 
+.blackjackAccess2
+{
+    margin-bottom: 10%;
+}
 
+#blackjack h2
+{   
+    font-size:3em;
+    font-weight: bold;
+}
+
+.blackjackPresentation p{
+    font-size: 1.3em;
+    padding-right:50px;
+    padding-top:130px;
+    text-align: right;
+
+}
 
 
 /* _______ Animations _______ */

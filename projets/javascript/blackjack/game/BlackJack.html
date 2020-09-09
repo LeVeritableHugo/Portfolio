@@ -1,0 +1,38 @@
+<html>
+	<head>
+	<meta charset = "UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="blackjack.css">
+	</head>
+	<body>
+		<h1>BlackJack<h1>
+			<div id ="tapis">
+				<h4>Les cartes de la banque</h4>
+				<div id="tapisbanque">
+				<span id="verso">
+				</span>
+				</div>
+				<h4>Vos cartes</h4>
+				<div id="tapisjoueur">
+				</div>
+			</div>
+		<div id="score">
+		<!-- Zone d'affichage des scores -->
+		<span class="textescore">Score banque: </span>
+		<span id='scorebanque'></span>
+		
+		<span class="textescore">Votre score: </span>
+		<span id="scorejoueur"></span>
+		<br>
+		<span class="textescore"> Carte ou reste?</span>
+		<div id="interaction">
+		<button id="Carte" onclick="tiragecarte()">Carte</button>
+		<button id="Reste" onclick="tiragecarteB()">Reste</button>
+		<button id="Rejouer" onclick="refresh()">Rejouer</button>
+		</div>
+		<p id="test"></p>
+		<script type="text/javascript" src="blackjack.js">
+		
+		</script>
+	</body>
+</html>

@@ -1,23 +1,45 @@
 // Images de preview projet 
-let imagePreview = document.querySelector('.dicegameAccess');
-let imagePreview2 = document.querySelector('.dicegameAccess2');
+let imagePreviewDice = document.querySelector('.dicegameAccess');
+let imageGitDice = document.querySelector('.dicegameAccess2');
+let imagePreviewBlackjack = document.querySelector('.blackjackAccess');
+let imageGitBlackjack = document.querySelector('.blackjackAccess2');
 
-imagePreview.addEventListener('mouseenter', function(){
-    imagePreview.src = 'dicegame/previewImages/preview2.png';
-    console.log("oui");
-})
 
-imagePreview.addEventListener('mouseleave', function(){
-    imagePreview.src = 'dicegame/previewImages/animationblur.png';
-    console.log("oui");
-})
 
-imagePreview2.addEventListener('mouseenter', function(){
-    imagePreview2.src = 'dicegame/previewImages/preview4.png';
-    console.log("oui");
-})
 
-imagePreview2.addEventListener('mouseleave', function(){
-    imagePreview2.src = 'dicegame/previewImages/preview3.png';
-    console.log("oui");
-})
+function voirGithub(elem)
+{
+    elem.addEventListener('mouseenter', function(){
+        elem.src = 'dicegame/previewImages/previewgit2.png';
+    })
+    
+    elem.addEventListener('mouseleave', function(){
+        elem.src = 'dicegame/previewImages/previewgit1.png';
+    })
+}
+
+
+// Anim jeu de dés
+
+    imagePreviewDice.addEventListener('mouseenter', function(){
+        imagePreviewDice.src = 'dicegame/previewImages/previewDice.png';
+    })
+
+    imagePreviewDice.addEventListener('mouseleave', function(){
+        imagePreviewDice.src = 'dicegame/previewImages/animationblur.png';
+    })
+
+voirGithub(imageGitDice);
+
+// Anim Blackjack
+
+    imagePreviewBlackjack.addEventListener('mouseenter', function(){
+        imagePreviewBlackjack.src = 'blackjack/previewImages/preview2.png';
+    })
+
+    imagePreviewBlackjack.addEventListener('mouseleave', function(){
+        imagePreviewBlackjack.src = 'blackjack/previewImages/preview1.png';
+    })
+
+    voirGithub(imageGitBlackjack);
+
