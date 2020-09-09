@@ -365,11 +365,12 @@ body{
 #presentation-projets p{
     position: absolute;
     z-index: 1;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     color: #d7d1dd;
     font-size:1.8em;
+    white-space: nowrap;
 }
 
 .projetPreview
@@ -396,8 +397,31 @@ body{
 /* Jeu de dés */
 #dicegame
 {
-    height:100vh;
+    padding:2%;
 }
+
+.dicegameAccess2
+{
+    margin-bottom: 10%;
+}
+
+#dicegame h2
+{   
+    font-size:3em;
+    font-weight: bold;
+}
+
+.test p{
+    font-size: 1.3em;
+    padding:30px;
+    padding-top:130px;
+    text-align: left;
+
+}
+
+
+
+
 
 /* _______ Animations _______ */
 .dice:hover

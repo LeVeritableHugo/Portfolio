@@ -13,7 +13,7 @@ const iconeDesign = document.querySelector('.Design');
 
 
 //Menu déroulant
-function expand()
+bouton.addEventListener('click', function()
 {
     document.querySelector('.wrapper-sidebar').classList.toggle("collapsed")
     document.querySelector('.wrapper-menu').classList.toggle("hidden");
@@ -33,13 +33,12 @@ function expand()
         expandIcon.src = 'img/Icones/Icone-0.png';
         collapsed = false;
     }
-}
-
-bouton.addEventListener('click', expand);
+});
 
 // Animation de marche
 
-function walking() 
+
+document.addEventListener('scroll', function() 
 {
   walkAnim.style.left= (posImage) + "px";
   posImage += 5;
@@ -48,9 +47,10 @@ function walking()
       posImage = 0;
   }
 
-}
-document.addEventListener('scroll', walking);
+});
 
+
+// Changement de description de projet
 function changeDesc(elem)
 {
     elem.addEventListener('mouseenter', function()
@@ -74,8 +74,6 @@ changeDesc(iconePHP);
 changeDesc(iconeC);
 changeDesc(iconeJava);
 changeDesc(iconeDesign);
-
-
 
 
 

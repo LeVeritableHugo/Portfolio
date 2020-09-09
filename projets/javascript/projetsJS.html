@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="../../style.css">
+        
+        <title>Hugo Maton - Projets Javascript</title>
+    </head>
+
+    <body>  
+        
+        <div id="presentation-projets">
+            <span>Projets Javascript</span>
+            <p>Passez votre souris sur les projets pour avoir un aperçu, ou cliquez pour accéder aux détails</p>
+            <a href="#dicegame" class="projetPreview dice">
+                <img src="dicegame/previewImages/image0.png">
+            </a>
+            
+            <a href="#blackjack" class="projetPreview jackblack">
+                <img src="blackjack/previewImages/image0.png">
+            </a>
+
+            <a href="#portfolio" class="projetPreview pfl">
+                <img src="portfolio/previewImages/image0.png">
+            </a>
+        </div>
+        
+        <div id="dicegame" class="container-fluid">
+
+            <div class="row"></div>
+                <div class="col-lg-12">
+                    <h2>Jeu de dés</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 test">
+                    <p>
+                        <i>Réalisé dans le cadre d'une formation Udemy.</i><br><br>
+                        Ce jeu consiste à lancer un dé afin d'atteindre un score total de 100.<br><br>
+                        Le score de manche s'incrémente à chaque lancé, le joueur peut choisir de garder ses points de manche afin de les ajouter à son score total, passant son tour.<br>
+                        Si le joueur lance un 1 ou deux 6 d'affilé, son score de manche est remis à 0 et il passe son tour.<br><br>
+                        Le score total nécéssaire pour gagner peut être changé par le biais du champ de texte situé en bas.                     
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <a href="dicegame/game/index.html" target="_blank">
+                                <img src="dicegame/previewImages/animationblur.png" class="dicegameAccess">
+                            </a>
+                        </div>
+
+                        <div class="col-lg-12 ">
+                            <a href="https://github.com/LeVeritableHugo/Portfolio" target="_blank">
+                                <img src="dicegame/previewImages/preview3.png" class="dicegameAccess2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="appProjets.js"></script>
+    </body>
+</html>
