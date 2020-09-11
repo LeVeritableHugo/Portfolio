@@ -1,0 +1,282 @@
+
+/************************** Page projets **************************/
+
+#preload { display: none; }
+
+#presentation-projets
+{
+    display: flex;
+    background-image: url(../../img/backgrounds/wave2.jpg);
+    background-position: center;
+    background-attachment: fixed;    
+    height: 100vh;
+}
+#presentation-projets span{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d7d1dd;
+    font-size:3em;
+}
+#presentation-projets p{
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d7d1dd;
+    font-size:1.8em;
+    white-space: nowrap;
+}
+
+.projetPreview
+{     
+    position: relative;
+    border-radius:10%;
+    height: 200px;
+    width: 300px;
+    top: 40%;
+    left: 15%;
+    margin-left: 100px;
+
+}
+.projetPreview img{
+    height: 200px;
+    width: 300px;
+    border-radius:10%;
+
+}
+.projetPreview img:hover{
+    opacity: 0; 
+}
+
+/* Style commun aux projets */
+
+.dicegameAccess2, .blackjackAccess2
+{
+    margin-bottom: 10%;
+}
+
+#dicegame h2, #blackjack h2, #portfolio h2
+{   
+    font-size:3em;
+    font-weight: bold;
+}
+.dicegamePresentation p, .blackjackPresentation p, .portfolioPresentation p{
+    font-size: 1.3em;
+    padding-left:50px;
+    padding-top:130px;
+}
+
+/******** Jeu de dés ********/
+.dicegamePresentation p
+{
+    text-align: left;
+}
+#dicegame
+{
+    padding:2%;
+    background-image: url(dicegame/previewImages/animBG1.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/******** Blackjack ********/
+#blackjack
+{
+    padding:2%;
+    background-image: url(blackjack/previewImages/backgroundBJ.png);
+    background-attachment: fixed;
+    color: #d7d1dd;
+}
+
+.blackjackPresentation p{
+    text-align: right;
+
+}
+
+/******** Porfolio ********/
+#portfolio
+{
+    padding:2%; 
+    background-image: url(portfolio/previewImages/backgroundPF.png);  
+    height:80vh;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.pfTitre
+{
+    color: #d7d1dd;
+}
+.portfolioPresentation p{
+    text-align: left;
+}
+/* .rocketAnim
+{
+    position: absolute;
+    z-index: 1;
+    left:1200px;
+    padding-top:500px;
+    object-fit: cover;
+    overflow: hidden;
+} */
+
+
+/* _______ Animations _______ */
+.dice:hover
+{
+    animation-name: previewDice;
+    animation-duration: 4s;
+    animation-delay: -0.5s;
+    animation-iteration-count: infinite;
+    background-position: center;
+    background-size: cover;
+}
+.jackblack:hover
+{
+    animation-name: previewBlackjack;
+    animation-duration: 4s;
+    animation-delay: -0.5s;
+    animation-iteration-count: infinite;
+    background-position: center;
+    background-size: cover;
+}
+.pfl:hover
+{
+    animation-name: previewPortfolio;
+    animation-duration: 4s;
+    animation-delay: -0.5s;
+    animation-iteration-count: infinite;
+    background-position: center;
+    background-size: cover;
+}
+
+
+@keyframes previewDice{
+    0%, 100%{
+        background-image: url(dicegame/previewImages/animation4.png);
+    }
+    25% {
+        background-image: url(dicegame/previewImages/animation1.png);
+    }
+  
+    50% {
+        background-image: url(dicegame/previewImages/animation2.png);
+
+    }
+    75% {
+        background-image: url(dicegame/previewImages/animation3.png);
+    }
+   
+  }
+
+@keyframes previewBlackjack{
+    0%, 100%{
+        background-image: url(blackjack/previewImages/animation4.png);
+    }
+    25% {
+        background-image: url(blackjack/previewImages/animation1.png);
+    }
+
+    50% {
+        background-image: url(blackjack/previewImages/animation2.png);
+
+    }
+    75% {
+        background-image: url(blackjack/previewImages/animation3.png);
+    }
+
+}
+
+@keyframes previewPortfolio{
+    0%, 100%{
+        background-image: url(portfolio/previewImages/animation4.png);
+    }
+    25% {
+        background-image: url(portfolio/previewImages/animation1.png);
+    }
+    
+    50% {
+        background-image: url(portfolio/previewImages/animation2.png);
+    
+    }
+    75% {
+        background-image: url(portfolio/previewImages/animation3.png);
+    }
+    
+}
+
+
+/***** Reponsive *****/
+
+/* Tablettes */
+@media(max-width:768px) {
+    #presentation-projets
+    {
+        margin-left: 50px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    #presentation-projets span{
+        font-size:3.5em;
+        white-space: nowrap;
+        margin-left: 20px;
+
+        
+    }
+    #presentation-projets p{
+        display: none;
+    }
+
+    .projetPreview
+    {   
+        top: 15%;
+        margin-top: 50px;
+    }
+    
+    #dicegame, #blackjack, #portfolio
+
+    {
+        padding:10%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #portfolio
+    {
+        background-image: url(portfolio/previewImages/backgroundPFsmall.png);
+        background-attachment: initial;
+    }
+    
+
+    #dicegame h2, #blackjack h2, #portfolio h2
+    {
+        margin-left: 50px;
+        padding-bottom: 25px;
+
+
+    }
+
+
+    .dicegameAccess, .blackjackAccess, .portfolioAccess, .dicegameAccess2, .blackjackAccess2, .portfolioAccess2
+    {
+        margin-left: 50px;
+        max-height: 75%;
+        margin-bottom: 0;
+    }
+
+    .blackjackPresentation p{
+        margin-right: 0;
+    }
+
+    
+}
+
+
+
