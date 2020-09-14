@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="../javascript/styleProjets.css">
+        <link type="text/css" rel="stylesheet" href="../../style.css">
+
+        
+        <title>Hugo Maton - Projets C/C++</title>
+    </head>
+
+    <body>  
+
+        <!-------------------- Sidebar -------------------->
+        <div class="wrapper-sidebar collapsed" >
+        
+            <div class="wrapper-collapsedIcon">
+                <a href="../../../Portfolio/index.html#wrapper-presentation">
+                    <img src="../../img/Icones/Icone-infos.png" class="collapsedIcon">
+                </a>
+                <a href="../../../Portfolio/index.html#projets">
+                    <img src="../../img/Icones/Icone-Projet.png" class="collapsedIcon">
+                </a>
+                <a href="../../../Portfolio/index.html#contact">
+                    <img src="../../img/Icones/Icone-Mail.png" class="collapsedIcon">
+                </a>
+                <a href="../../../Portfolio/index.html">
+                    <img src="../../img/Icones/Icone-accueil.png" class="collapsedIcon">
+                </a>
+            </div>
+            
+        </div>
+
+       
+        <!-------------------- Banque de DVD -------------------->
+        <div id="roboto" class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12 robotoTitre">
+                    <h2>C - Interface graphique et Pathfinding</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 robotoPresentation0">
+                    <p>
+                        <i>Réalisé dans le cadre d'un BTS SIO. (Stage au laboratoire <a href="https://www.labsticc.fr/en/index/" target="_blank">Lab-STICC</a>)</i><br><br>
+                        Ce stage s'est déroulé en deux parties, du 3/12/2018 au 28/12/2018 puis du 25/02/2019 au 05/04/2019.<br><br>
+                        Durant la première partie, j'étais chargé de réaliser une interface graphique en C en utilisant la librairie
+                        <a href="http://moscova.inria.fr/~peskine/enseignement/iup-2002/graphics-doc.html" target="_blank">graphics.h</a>, sous environnement Debian 9.<br><br>
+                        La deuxième partie, en collaboration avec Malik Rebray, un collègue du BTS, couvre le pathfinding et l'orientation d'un objet dans un labyrinthe.
+                    </p>
+                </div>
+
+                <div class="col-lg-6"></div>
+            </div>
+
+            <div class="row altPres">
+                <div class="col-lg-6 robotoPresentation">
+                    <p>
+                        La consigne complète: créer une interface graphique afin de représenter un robot dans un labyrinthe. 
+                        Ce dernier devant être capable d'être généré par un fichier texte externe.<br>
+                        Puis, coder une fonction de déplacement du robot au clavier, respectant les lois de la physique. (passage à travers les murs interdits !)    
+                        <br><br>
+                        Dans un premier temps, je me suis familiarisé avec la librairie en attaquant la création de la grille qui accueillerait plus tard le labyrinthe.
+
+                    </p>
+                </div>
+
+                <div class="col-lg-6 wrapper-images">
+                    <span><i>Passez votre souris sur les images pour zoomer</i></span><br>
+                    <img src="imagesPreview/grillePrototype1.png" class="robotoAccess">
+                    <figcaption>Premier test de création de grille pour le labyrinthe... Peu concluant</figcaption>
+
+                    <img src="imagesPreview/grillePrototype2.png" class="robotoAccess">
+                    <figcaption>Après un peu de persévérance et une meilleure approche de la librairie, enfin une vraie grille</figcaption>
+                </div>
+            </div>  
+
+            <div class="row">
+                <div class="col-lg-6 robotoPresentation">
+                    <p>
+                       Ensuite, j'ai crée la représentation de notre robot ainsi que des variantes selon la direction dans laquelle il se dirigerait.<br><br>
+                       La prochaine étape était de créer des murs, à travers lesquels le robot ne pouvait pas se situer. Les premiers test incluaient un remplissage manuel du
+                       labyrinthe, n'ayant pas encore codé la génération par fichier.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 wrapper-images">
+                    <img src="imagesPreview/roboto.png" class="robotoAccess">
+                    <figcaption>Ainsi naquit Roboto</figcaption>
+                    <img src="imagesPreview/testRemplissageLaby.png" class="robotoAccess">
+                    <figcaption>Traverser les murs est synonyme d'amende forfaitaire de 5000€</figcaption>
+                </div>
+            </div> 
+
+            <div class="row altPres">
+                <div class="col-lg-6 robotoPresentation">
+                    <p>
+                       Le remplissage par fichier se présente comme ceci:<br>
+                       On spécifie le nombre de lignes puis de colones, puis on effectue la représentation ligne par ligne des murs/espaces libres.<br>
+                       A savoir que les murs sont représentés par des "*" et les cases vides par des "0".<br><br>
+
+                    </p>
+                </div>
+
+                <div class="col-lg-6 wrapper-images">
+                    <img src="imagesPreview/remplissageFichier.png" class="robotoAccess">
+                    <figcaption>Fichier</figcaption>
+                    <img src="imagesPreview/testRemplissageLaby.png" class="robotoAccess">
+                    <figcaption>Traverser les murs est synonyme d'amende forfétaire de 5000€</figcaption>
+                </div>
+            </div> 
+        </div>
+ 
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="appC.js"></script>
+
+    </body>
+</html>

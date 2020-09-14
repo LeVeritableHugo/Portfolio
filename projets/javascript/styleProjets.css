@@ -13,7 +13,6 @@
 }
 #presentation-projets span{
     position: absolute;
-    z-index: 1;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -22,7 +21,6 @@
 }
 #presentation-projets p{
     position: absolute;
-    z-index: 1;
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
@@ -125,6 +123,96 @@
     object-fit: cover;
     overflow: hidden;
 } */
+
+
+/******** PHP ********/
+
+#dvd
+{
+    background-image: url(../php/imagesPreview/backgroundDVD.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+.dvdTitre
+{
+    padding: 25px;
+    background-color: #171717;
+    color: #d7d1dd;
+}
+.dvdAccess, .dvdAccess2
+{
+    max-height: 1200px;
+    max-width: 800px;
+}
+
+.dvdPresentation
+{
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-bottom: 80px;
+    font-size: 1.3em;
+}
+
+.dvdPresentation2
+{
+    text-align: left;
+    padding-top: 40px;
+    padding-left: 100px;
+    font-size: 1.3em;
+}
+
+/******** C/C++ ********/
+figcaption
+{
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.wrapper-images
+ {
+     margin-top: 50px;
+ }
+.wrapper-images > img:hover{
+   transform:scale(2.5);
+   z-index: 1;
+}
+
+.robotoTitre
+{
+    padding: 25px;
+    background-color: #171717;
+    color: #d7d1dd;
+    margin-bottom: 80px;
+}
+.robotoPresentation
+{
+    text-align: left;
+    padding-left: 100px;
+    font-size: 1.3em;
+    transform: translateY(35%);
+}
+.robotoPresentation0
+{
+    text-align: left;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    font-size: 1.3em;
+}
+
+.altPres
+{
+    background-color: #171717;
+    color:#d7d1dd ;
+}
+
+
+.robotoAccess, .robotoAccess2
+{
+    max-height: 700px;
+    max-width: 400px;
+}
+
 
 
 /* _______ Animations _______ */
@@ -278,5 +366,51 @@
     
 }
 
+/* Portables */
+@media (max-width: 576px) {
 
+    #presentation-projets
+    {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #presentation-projets span{
+        font-size:2em;
+        white-space: nowrap;
+        margin-top: 2%;
+        margin-left:5px;
+
+        
+    }
+    #presentation-projets p{
+        display: none;
+    }
+
+    .projetPreview
+    {       
+        position: relative;
+        border-radius:10%;
+        height: 150px;
+        width: 225px;
+        margin-top: 10%;
+        margin-left:25px;
+        /* transform: translateX(-50%); */
+    }
+
+    .projetPreview img
+    {       
+        height: 150px;
+        width: 225px;
+    }
+
+    .dicegameAccess, .blackjackAccess, .portfolioAccess, .dicegameAccess2, .blackjackAccess2, .portfolioAccess2
+    {
+        margin: 0;
+        max-height: 50%;
+    }
+
+
+   
+}
 
