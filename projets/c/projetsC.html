@@ -13,7 +13,10 @@
     </head>
 
     <body>  
-
+        <!-- <div class="loading">
+            <h1>Chargement</h1>
+            <img src="../../img/Icones/imageChargement.png" class="loadingImage">
+        </div> -->
         <!-------------------- Sidebar -------------------->
         <div class="wrapper-sidebar collapsed" >
         
@@ -47,15 +50,22 @@
             <div class="row">
                 <div class="col-lg-6 robotoPresentation0">
                     <p>
-                        <i>Réalisé dans le cadre d'un BTS SIO. (Stage au laboratoire <a href="https://www.labsticc.fr/en/index/" target="_blank">Lab-STICC</a>)</i><br><br>
+                        <i>Réalisé dans le cadre d'un BTS SIO. (Stage au laboratoire <a href="https://www.labsticc.fr/en/index/" target="_blank">Lab-STICC</a>)</i><br><br> 
                         Ce stage s'est déroulé en deux parties, du 3/12/2018 au 28/12/2018 puis du 25/02/2019 au 05/04/2019.<br><br>
                         Durant la première partie, j'étais chargé de réaliser une interface graphique en C en utilisant la librairie
                         <a href="http://moscova.inria.fr/~peskine/enseignement/iup-2002/graphics-doc.html" target="_blank">graphics.h</a>, sous environnement Debian 9.<br><br>
-                        La deuxième partie, en collaboration avec Malik Rebray, un collègue du BTS, couvre le pathfinding et l'orientation d'un objet dans un labyrinthe.
+                        La deuxième partie, en collaboration avec <a href="https://github.com/Milkot" target="_blank">Malik Rebray</a>, un collègue du BTS, couvre le pathfinding et l'orientation d'un objet dans un labyrinthe.<br><br>
+                        Le rapport de stage détaillé pour la deuxème partie peu être consulté <a href="Rapport de Stage.pdf" target="_blank">ici</a>.
                     </p>
                 </div>
 
                 <div class="col-lg-6"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 robotoTitre">
+                    <h2>Partie 1 - Interface graphique et déplacement manuel</h2>
+                </div>
             </div>
 
             <div class="row altPres">
@@ -103,24 +113,99 @@
                        Le remplissage par fichier se présente comme ceci:<br>
                        On spécifie le nombre de lignes puis de colones, puis on effectue la représentation ligne par ligne des murs/espaces libres.<br>
                        A savoir que les murs sont représentés par des "*" et les cases vides par des "0".<br><br>
-
+                       Une fois les murs et la génération par fichier terminés, il fallait donner des jambes (enfin une roue) au robot, et intégrer un déplacement au clavier.
                     </p>
                 </div>
 
                 <div class="col-lg-6 wrapper-images">
                     <img src="imagesPreview/remplissageFichier.png" class="robotoAccess">
-                    <figcaption>Fichier</figcaption>
-                    <img src="imagesPreview/testRemplissageLaby.png" class="robotoAccess">
-                    <figcaption>Traverser les murs est synonyme d'amende forfétaire de 5000€</figcaption>
+                    <figcaption>Le robot pensait être fou, il ne savait pas s'orienter dans cet environnement en constante évolution</figcaption>
+                    <img src="imagesPreview/calculDeplacements.png" class="robotoAccess">
+                    <figcaption>La fonction marche, et le robot roule</figcaption>
                 </div>
             </div> 
+            
+            <div class="row">
+                <div class="col-lg-12 robotoTitre2">
+                    <h2>Partie 2 - Pathfinding</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 robotoPresentation2">
+                    <p>
+                        D’abord, nous nous sommes dirigés vers la réalisation d’une fonction récursive, permettant au robot de vérifier successivement si les cases au Nord, Sud, Est et Ouest de sa position sont :<br>
+                        -	Dans le labyrinthe<br>
+                        -	Un mur<br>
+                        -	Un chemin marqué comme une impasse auparavant<br><br>
+                        Dans le cas où un chemin libre mène à une impasse, la fonctionnalité récursive remonte la pile d’appel de fonction (backtracking) jusqu’à la dernière intersection, tout en marquant les cases concernées comme menant à une impasse.<br>
+                        Le labyrinthe est représenté par un fichier texte, où les éléments sont traduits comme ceci :
+                        
+                        <img src='imagesPreview/correspondance.png'>
+                    </p>
+                </div>
+                
+                <div class="col-lg-6 wrapper-images">
+                    <img src="imagesPreview/Recursivite1.png" class="robotoAccess">
+                    <figcaption>Le chemin le vers la sortie est marqué par les cases jaunes
+                        <br>Les impasses évaluées par l'algorithme sont marquées par des cases noires
+                    </figcaption>
+                    <img src="imagesPreview/conceptBoston.png" class="robotoAccess">
+                    <figcaption>Nous nous sommes appuyés sur cette solution de l'Université de Boston</figcaption>
+                </div>
+            </div>
+
+            <div class="row altPres">
+                <div class="col-lg-6 robotoPresentation3">
+                    <p>
+                       Ensuite, afin de charger un fichier externe (ou de sauvegarder le labyrinthe actuel dans un fichier), nous avons fait évoluer l'interface grapique.<br>
+                       L'ajout d'un bouton "charger" ainsi que "sauvegarder" a donc été fait.<br><br>
+                       Pour afiner l'expérience utilisateur, nous avons également rajouté un support de la souris pour les déplacement. <br>
+                       Auparavant, seul un déplacement via les touches du clavier était possible, nous avons donc opté pour l'utilisation de boutons à la souris en tant que mode alternatif.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 wrapper-images">
+                    <img src="imagesPreview/NouvelleInterface.png" class="robotoAccess2">
+                    <figcaption class="robotoAccess25">L'interface définitive, maintenant disponible chez votre marchand de journaux.</figcaption>
+                </div>
+            </div> 
+            
+            <div class="row">
+                <div class="col-lg-6 robotoPresentation">
+                    <p>
+                        Une fois notre algorithme récursif fonctionnel, nous avons proposé l’implémentation de l’algorithme de Dijkstra afin de déterminer le chemin le plus court dans le labyrinthe.<br><br> 
+
+                        L’approche du calcul du chemin étant différente, il n’était plus pertinent d’avoir les fonctions « charger » et « sauvegarder » implémentées précédemment.<br> 
+                        Nous avons donc supprimé entièrement le bouton « sauvegarder », et avons remplacé la fonction de chargement en une simple réinitialisation du labyrinthe.<br><br>
+                        Nous avons également ajouté la notion de difficulté de terrain (n’ayant pas d’intérêt dans la version récursive) et une coloration adéquate des cases concernées.
+                        <br><br>
+                        Et voilà, si tel Roboto vous cherchez le chemin le plus court, <a href="../../index.html#contact"> voici celui pour me contacter</a> :)
+                    </p>
+                </div>
+                
+                <div class="col-lg-6 wrapper-images">
+                    <img src="imagesPreview/difficulteTerrain.png" class="robotoAccess">
+                    <figcaption>La coloration des cases représentent la difficulté de terrain (voir légende ci-dessous)</figcaption>
+
+                    
+                    <img src="imagesPreview/LaLegendeDeDijkstra.png" class="robotoAccess">
+                    <figcaption>Récapitulatif du fonctionnement avec l'algorithme de Dijkstra.
+                        <br>    La légende pour les couleurs et le numéro des cases ont été ajouté pour une visualisation plus claire.
+                    </figcaption>
+
+                    <img src="imagesPreview/abracadijkstra.png" class="robotoAccess3">
+                    <figcaption>Notre code de l'algorithme de Dijkstra en C</figcaption>
+                </div>
+            </div>
+            
+
+
         </div>
- 
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="appC.js"></script>
-
-    </body>
-</html>
+            
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+            <script src="appC.js"></script>
+            
+        </body>
+        </html>

@@ -11,6 +11,18 @@ const iconeC = document.querySelector('.C');
 const iconeJava = document.querySelector('.Java');
 const iconeDesign = document.querySelector('.Design');
 
+// Chargement
+
+window.addEventListener('load', function () {
+    
+    // Opacité à 0, transition propre
+    window.setTimeout(function (){ document.querySelector('.loading').style.opacity = '0';}, 1500);
+    // Suppression de la div pour avoir accès au reste
+    window.setTimeout(function (){ document.querySelector('.loading').classList.add('removed');}, 2000);
+
+    
+})
+
 
 //Menu déroulant
 bouton.addEventListener('click', function()

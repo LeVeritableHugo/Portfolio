@@ -3,6 +3,41 @@
 
 #preload { display: none; }
 
+.loading
+{
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-color: #171717;
+    position: fixed;
+    transition: opacity 1000ms linear;
+}
+
+.loadingImage
+{
+    z-index: 6;
+    max-height: 150px;
+    animation: loadingimg;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
+    transition: opacity 1000ms linear;
+}
+
+
+@keyframes loadingimg
+{
+    
+   from{ 
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);    
+
+    }
+}
+
 #presentation-projets
 {
     display: flex;
@@ -168,11 +203,12 @@ figcaption
     margin-bottom: 50px;
     font-weight: 600;
 }
-
+/* 
 .wrapper-images
  {
      margin-top: 50px;
- }
+ } */
+
 .wrapper-images > img:hover{
    transform:scale(2.5);
    z-index: 1;
@@ -185,6 +221,23 @@ figcaption
     color: #d7d1dd;
     margin-bottom: 80px;
 }
+.robotoTitre2
+{
+    padding: 25px;
+    background-color: #171717;
+    color: #d7d1dd;
+    margin-top: 80px;
+
+    margin-bottom: 80px;
+}
+
+.robotoPresentation0
+{
+    text-align: left;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    font-size: 1.3em;
+}
 .robotoPresentation
 {
     text-align: left;
@@ -192,12 +245,21 @@ figcaption
     font-size: 1.3em;
     transform: translateY(35%);
 }
-.robotoPresentation0
+
+.robotoPresentation2
 {
     text-align: left;
     padding-left: 100px;
-    padding-bottom: 100px;
     font-size: 1.3em;
+    transform: translateY(10%);
+}
+
+.robotoPresentation3
+{
+    text-align: left;
+    padding-left: 100px;
+    font-size: 1.3em;
+    transform: translateY(20%);
 }
 
 .altPres
@@ -207,13 +269,33 @@ figcaption
 }
 
 
-.robotoAccess, .robotoAccess2
+.robotoAccess
 {
     max-height: 700px;
     max-width: 400px;
 }
 
+.robotoAccess2
+{
+    max-height: 700px;
+    max-width: 400px;
+    margin-top: 80px;
 
+}
+
+.robotoAccess3
+{
+    max-height: 400px;
+    max-width: 400px;
+    margin-bottom: 0;
+
+}
+
+.robotoAccess25
+{
+    margin-bottom: 80px;
+
+}
 
 /* _______ Animations _______ */
 .dice:hover

@@ -16,6 +16,49 @@ body{
 
 }
 
+.loading
+{
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-color: #171717;
+    position: fixed;
+    transition: opacity 1000ms linear;
+}
+
+.loadingImage
+{
+    z-index: 6;
+    max-height: 150px;
+    animation: loadingimg;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
+    transition: opacity 1000ms linear;
+}
+
+
+@keyframes loadingimg
+{
+    
+   from{ 
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);    
+
+    }
+}
+
+.loading h1
+{
+    color: #d7d1dd;
+    margin-top:20%;
+    font-size: 3em;
+}
+
+
 .welcome-bg{
     background-image: url(img/backgrounds/PolyBackground.jpg);
     background-size: cover;
