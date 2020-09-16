@@ -203,11 +203,11 @@ figcaption
     margin-bottom: 50px;
     font-weight: 600;
 }
-/* 
+
 .wrapper-images
  {
      margin-top: 50px;
- } */
+ }
 
 .wrapper-images > img:hover{
    transform:scale(2.5);
