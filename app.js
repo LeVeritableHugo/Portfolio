@@ -16,9 +16,9 @@ const iconeDesign = document.querySelector('.Design');
 window.addEventListener('load', function () {
     
     // Opacité à 0, transition propre
-    window.setTimeout(function (){ document.querySelector('.loading').style.opacity = '0';}, 1500);
+    window.setTimeout(function (){ document.querySelector('.loading').style.opacity = '0';}, 1000);
     // Suppression de la div pour avoir accès au reste
-    window.setTimeout(function (){ document.querySelector('.loading').classList.add('removed');}, 2000);
+    window.setTimeout(function (){ document.querySelector('.loading').classList.add('removed');}, 1500);
 
     
 })
